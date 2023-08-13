@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label>Enter UserName:</label><input id="usn"><br>
+        <label>Enter Password:</label><input type="password" id="psw"><br>
+        <button id="btn" onclick="getInfo()">Send</button>
+    </div>
+    <div>
+        <label>Enter UserName:</label><input id="usnLog"><br>
+        <label>Enter Password:</label><input type="password" id="pswLog"><br>
+        <button id="btnLog" onclick="logIn()">log in</button>
+    </div>
+    <div id="dis"></div>
+    <script>
+        function getInfo() {
+            localStorage.setItem("userName", usn.value)
+            localStorage.setItem("Password", psw.value)
+            usn.value = ''
+            psw.value = ''
+        }
+        function logIn() {
+            if (usnLog.value == localStorage.getItem("userName") && pswLog.value == localStorage.getItem("Password")) {
+                (dis.innerHTML = `nice!`)
+            }
+            else {
+                if (usnLog.value != localStorage.getItem("userName") && pswLog.value != localStorage.getItem("Password")) {
+                    dis.innerHTML = `user name and password are incorrect`
+                } else {
+                    (usnLog.value != localStorage.getItem("userName")) ? (dis.innerHTML = `user name are incorrect`) : (dis.innerHTML = `password are incorrect`);
+                }
+            }
+            usnLog.value = ''
+            pswLog.value = ''
+        }
+    </script>
+</body>
+
+</html>

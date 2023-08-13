@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let students = [
+            { "firstName": "John", "lastName": "Doe", "age": "22", "gender": "Male" },
+            { "firstName": "Elsa", "lastName": "Snow", "age": "25", "gender": "Female" },
+            { "firstName": "Gold", "lastName": "Fency", "age": "32", "gender": "Male" }
+        ]
+
+        function AllStudents() {
+            for (let i = 0; i < students.length; i++) {
+                console.log(students[i]);
+            }
+        }
+
+        function LastStudent() {
+            for (let i = 0; i < students.length; i++) {
+                (i == (students.length - 1)) && console.log(students[i]);
+            }
+        }
+
+        function AllStudentsBackwards() {
+            for (let i = students.length - 1; i >= 0; i--) {
+                console.log(students[i]);
+            }
+        }
+
+        function Reset() {
+            for (let i = 0; i < students.length; i++) {
+                students[i].firstName = ''
+                students[i].lastName = ''
+                students[i].age = ''
+                students[i].gender = ''
+            }
+            for (let i = 0; i < students.length; i++) {
+                console.log(students[i]);
+            }
+        }
+        AllStudents()
+        LastStudent()
+        AllStudentsBackwards()
+        Reset()
+    </script>
+</body>
+
+</html>

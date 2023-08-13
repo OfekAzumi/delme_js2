@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // // fizzbuzz Operation
+        // for (let i = 1; i <= 100; i++) {
+        //     if (i % 3 == 0) {
+        //         if (i % 5 == 0) { // (% 3 & 5) == fizzbuzz
+        //             console.log("FizzBuzz");
+        //         }
+        //         else { // only (% 3) == fizz
+        //             console.log("Fizz");
+        //         }
+        //     }
+        //     else {
+        //         if (i % 5 == 0) { // only (% 5) == buzz
+        //             console.log("Buzz");
+        //         }
+        //         else { console.log(i); } // no (% 3 + 5) == i
+        //     }
+        // }
+
+        // console.log("Op5");//fizzbuzz
+        // let c5 = 1
+        // while (c5 <= 100) {
+        //     let res = c5
+        //     if (c5 % 3 == 0) res = 'fizz'
+        //     if (c5 % 5 == 0) res = 'buzz'
+        //     if (c5 % 3 == 0 && c5 % 5 == 0) res = 'fizzbuzz'
+        //     console.log(res);
+        //     c5++
+        // }
+
+        function FizzBuzz() {
+            for (let i = 1; i <= 100; i++) {
+                let x = i;
+                if (i % 3 == 0) x = 'fizz'
+                if (i % 5 == 0) x = 'buzz'
+                if (i % 3 == 0 && i % 5 == 0) x = 'fizzbuzz'
+                console.log(x);
+            }
+        }
+        FizzBuzz()
+    </script>
+</body>
+
+</html>
